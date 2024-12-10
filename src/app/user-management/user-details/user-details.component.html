@@ -1,0 +1,53 @@
+<div class="contrast-container">
+    <h2>Detalles del Usuario</h2>
+    <form *ngIf="user">
+      <!-- Datos Generales -->
+      <fieldset>
+        <legend>Datos Generales</legend>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input matInput [value]="user.name" disabled style="color: rgba(0, 0, 0, 0.693);"/>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput [value]="user.email" disabled style="color: rgba(0, 0, 0, 0.693);"/>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Teléfono</mat-label>
+            <input matInput [value]="user.phone" disabled style="color: rgba(0, 0, 0, 0.693);"/>
+          </mat-form-field>
+        </div>
+      </fieldset>
+  
+      <!-- Datos Detallados -->
+      <fieldset>
+        <legend>Datos Detallados</legend>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Dirección</mat-label>
+            <input matInput [value]="user.address ? user.address : 'No especificado'" disabled style="color: rgba(0, 0, 0, 0.693);"/>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Fecha de Nacimiento</mat-label>
+            <input matInput [value]="user.dateOfBirth ? (user.dateOfBirth | date:'longDate') : 'No especificado'" disabled style="color: rgba(0, 0, 0, 0.693);"/>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Ocupación</mat-label>
+            <input matInput [value]="user.occupation ? user.occupation : 'No especificado'" disabled style="color: rgba(0, 0, 0, 0.693);"/>
+          </mat-form-field>
+        </div>
+      </fieldset>
+    </form>
+  
+    <!-- Enlaces para navegar -->
+    <div class="navigation-links">
+      <a routerLink="/users">Regresar a Lista de Usuarios</a> |
+      <a routerLink="/home">Regresar a Home</a>
+    </div>
+  </div>
+  

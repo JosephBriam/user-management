@@ -1,0 +1,74 @@
+/* Contenedor principal con contraste */
+.contrast-container {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para resaltar el contenedor */
+    max-width: 800px;
+    margin: 20px auto; /* Centramos el contenedor */
+  }
+  
+  h2 {
+    color: #3f51b5;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+  }
+  
+  /* Estilos de los fieldset */
+  fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  legend {
+    font-size: 1.2em;
+    color: #3f51b5;
+    padding: 0 10px;
+  }
+  
+  /* Contenedor para los inputs, organizados en dos columnas */
+  .form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre los inputs */
+  }
+  
+  /* Ajuste del ancho de los inputs */
+  mat-form-field {
+    flex: 1 1 calc(50% - 20px); /* Los inputs ocupan el 50% del ancho menos el gap */
+    min-width: 200px;
+  }
+  
+  /* Botón que ocupa todo el ancho */
+  button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #3f51b5;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  button:hover {
+    background-color: #303f9f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Estilo de los enlaces */
+  a {
+    color: #3f51b5;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

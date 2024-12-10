@@ -1,0 +1,68 @@
+<div class="contrast-container">
+    <h2>Agregar Nuevo Usuario</h2>
+    <form (ngSubmit)="addUser()" #userForm="ngForm">
+      
+      <!-- Datos Generales -->
+      <fieldset>
+        <legend>Datos Generales</legend>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input matInput [(ngModel)]="newUser.name" name="name" required />
+            <mat-error *ngIf="userForm.controls['name']?.invalid && userForm.controls['name']?.touched">
+              El nombre es obligatorio
+            </mat-error>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" [(ngModel)]="newUser.email" name="email" required email />
+            <mat-error *ngIf="userForm.controls['email']?.invalid && userForm.controls['email']?.touched">
+              Email inválido
+            </mat-error>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Teléfono</mat-label>
+            <input matInput [(ngModel)]="newUser.phone" name="phone" required pattern="[0-9]{9}" />
+            <mat-error *ngIf="userForm.controls['phone']?.invalid && userForm.controls['phone']?.touched">
+              Número inválido (9 dígitos)
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </fieldset>
+  
+      <!-- Datos Detalles -->
+      <fieldset>
+        <legend>Datos Detallados</legend>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Dirección</mat-label>
+            <input matInput [(ngModel)]="newUser.address" name="address" />
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Fecha de Nacimiento</mat-label>
+            <input matInput [(ngModel)]="newUser.dateOfBirth" name="dateOfBirth" type="date" />
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Ocupación</mat-label>
+            <input matInput [(ngModel)]="newUser.occupation" name="occupation" />
+          </mat-form-field>
+        </div>
+      </fieldset>
+  
+      <!-- Botón para enviar el formulario -->
+      <button mat-raised-button color="primary" type="submit" [disabled]="userForm.invalid">
+        Agregar Usuario
+      </button>
+    </form>
+  
+    <!-- Enlaces para navegar -->
+    <div style="text-align: center; margin-top: 20px;">
+      <a mat-button routerLink="/users">Regresar a Lista de Usuarios</a> |
+      <a mat-button routerLink="/home">Regresar a Home</a>
+    </div>
+  </div>
+  

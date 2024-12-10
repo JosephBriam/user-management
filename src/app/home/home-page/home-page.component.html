@@ -1,0 +1,37 @@
+<div class="home-all">
+    <div class="home-container">
+        <h1>Bienvenido a la Gestión de Usuarios</h1>
+        <p>Explora las funcionalidades disponibles utilizando las siguientes opciones.</p>
+      
+        <div class="card-container">
+          <!-- Tarjeta para Ver Lista de Usuarios -->
+          <mat-card class="card" [@hoverAnimation]="hovered ? 'hovered' : 'default'" (mouseenter)="hovered = true" (mouseleave)="hovered = false">
+            <mat-card-header>
+              <mat-icon>list</mat-icon>
+              <mat-card-title>Ver Lista de Usuarios</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>Navega a la lista completa de usuarios registrados en el sistema.</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" routerLink="/users">Ver Usuarios</button>
+            </mat-card-actions>
+          </mat-card>
+      
+          <!-- Tarjeta para Agregar un Nuevo Usuario -->
+          <mat-card class="card" [@hoverAnimation]="hovered2 ? 'hovered' : 'default'" (mouseenter)="hovered2 = true" (mouseleave)="hovered2 = false">
+            <mat-card-header>
+              <mat-icon>person_add</mat-icon>
+              <mat-card-title>Agregar Nuevo Usuario</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>Registra nuevos usuarios en el sistema utilizando el formulario.</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="accent" routerLink="/users/new">Agregar Usuario</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+      
+</div>

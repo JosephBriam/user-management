@@ -1,0 +1,47 @@
+/* Estilos generales de la barra de navegación */
+.nav-toolbar {
+    background-color: #3f51b5; /* Color principal */
+    padding: 10px 20px; /* Aumenta el padding para un espacio más cómodo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  }
+  
+  .nav-title {
+    font-size: 1.5em; /* Tamaño del texto del título */
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Espaciador para alinear los elementos a la derecha */
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  /* Estilos para los botones de navegación */
+  .nav-button {
+    color: white;
+    font-weight: 500;
+    font-size: 1.1em;
+    margin-left: 15px;
+    text-transform: uppercase; /* Hacer los textos en mayúsculas para resaltar */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+  }
+  
+  .nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo ligeramente claro al hacer hover */
+    color: #ffeb3b; /* Cambia a amarillo en hover para resaltar */
+    border-radius: 5px; /* Bordes redondeados para hacer los botones más visibles */
+    height: 100%;
+  }
+  
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .nav-toolbar {
+      padding: 8px 15px; /* Ajusta el padding en pantallas más pequeñas */
+    }
+  
+    .nav-button {
+      font-size: 1em; /* Reduce el tamaño del texto en pantallas pequeñas */
+      margin-left: 10px;
+    }
+  }
+  
